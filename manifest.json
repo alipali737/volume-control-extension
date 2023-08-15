@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Volume Controller",
+    "description": "Control volume of specific windows",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "action": {
+        "default_popup": "controller.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.youtube.com/*"],
+            "js": ["content.js"]
+        }
+    ]
+}
